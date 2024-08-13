@@ -13,7 +13,17 @@ app.get('/', function (req, res) {
   res.sendFile(process.cwd() + '/views/index.html');
 });
 
-
+app.use(bodyParser.urlencoded({extended: true}));
+app.post('/api/fileanalyse', (req, res) => {
+  
+  // const fileInfo = {
+  //   name,
+  //   type,
+  //   size
+  // }
+  // res.json(fileInfo)
+  // req.body.upfile
+});
 
 
 const port = process.env.PORT || 3000;
